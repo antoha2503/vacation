@@ -40,7 +40,7 @@
     "license": "LGPL-3",
     'price': "0",
     'currency': 'USD',
-    'images': [],
+    'images': ['static/description/icon_screenshot.png'],
     "depends": ['base','hr'],
     "data": [
         "views/vacation_empl.xml",
