@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<odoo>
-    <menuitem id="root_vacation_empl" name="Vacation" sequence="10" />
-    <menuitem id="vacation_empl" name="Vacation" parent='root_vacation_empl' action="action_vacation_empl" sequence="10"/>
-</odoo>
