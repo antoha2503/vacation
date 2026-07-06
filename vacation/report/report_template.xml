@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_vacation">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <div style="width:100%; float:left; font-size: 14pt;font-family: 'Times New Roman', Times, serif;">
+                            <div style="float:right; width:300px; height:300px; text-align: left;">
+                                <p>
+                                    Дирекотору <span t-out="o.name_company.name"/><br/>
+                                    <span t-out="o.parent_id.name"/><br/>
+                                </p>
+                                <p>
+                                    <span t-out="o.department_id.name"/><br/>
+                                    <span t-out="o.employee_id.name"/><br/>
+                                </p>
+                            </div>
+                        </div>
+                        <h4 style="wight:100%; text-align:center; font-size: 14pt; font-family: 'Times New Roman', Times, serif;">ЗАЯВА</h4>
+                        <div style="width:100%; margin-top:60px; margin-bottom:140px; text-align: left; float:left; text-indent: 30px; font-size: 14pt; font-family: 'Times New Roman', Times, serif;">
+                            <t t-if="o.type_statement == 'main_vacation'">
+                                Прошу надати щорічну основну відпустку з <span t-out="o.start_date.strftime('%d %B %Y')"/> на <span t-out="o.number_days"/> календарні дні.
+                            </t>
+                            <t t-if="o.type_statement == 'part_leave'">
+                                У зв'язку із сімейними обставинами прошу надати мені частину щорічної відпустки.
+                            </t>
+                            <t t-if="o.type_statement == 'own_account'">
+                                Прошу надати відпустку з без збереження заробітної плати за згодою сторін на період дії воєнного стану з <span t-out="o.start_date.strftime('%d %B %Y')"/> по <span t-out="o.end_date.strftime('%d %B %Y')"/>.
+                            </t>
+                            <t t-if="o.type_statement == 'birth_child'">
+                                Прошу надати відпустку при народженні дитини на <span t-out="o.number_days"/> календарних днів із <span t-out="o.start_date.strftime('%d %B %Y')"/> по <span t-out="o.end_date.strftime('%d %B %Y')"/>.<br/><br/>
+                                <p style="text-indent: 30px;">Додатки: 1.Свідоцтво про народження дитини серії НО №<span style="display:inline-block; width:120px;border-bottom: 1px solid #000000"></span> від <span style="display:inline-block; width:120px;border-bottom: 1px solid #000000"></span></p>
+                            </t>
+                            <t t-if="o.type_statement == 'babysitting'">
+                                Прошу надати відпустку для догляду за дитиною до досягнення нею трирічного віку з <span t-out="o.start_date.strftime('%d %B %Y')"/> по <span t-out="o.end_date.strftime('%d %B %Y')"/>.
+                                <p style="text-indent: 30px;">Додатки: 1.<span style="display:inline-block; width:320px;border-bottom: 1px solid #000000"></span></p>
+                            </t>
+                        </div>
+                        <div style="margin-left: 30px; float:left; width:120px; border-bottom: 1px solid #000000"></div>
+                        <div style="margin-right: 30px;float:right; width:120px;border-bottom: 1px solid #000000"></div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

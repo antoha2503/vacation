@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_employee_form_inherit_vacation" model="ir.ui.view">
+        <field name="name">hr.employee.form.inherit.vacation</field>
+        <field name="model">hr.employee</field>
+        <!-- Указываем Odoo, какую именно стандартную форму мы хотим дополнить -->
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <!-- Находим заголовок (header), где лежат все главные кнопки -->
+            <xpath expr="//header" position="inside">
+                <!-- Добавляем нашу кнопку -->
+                <button name="action_open_vacation_wizard"
+                        string="Подать на отпуск"
+                        type="object"
+                        class="oe_highlight"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
