@@ -23,30 +23,13 @@
                     </group>
                 </sheet>
                 <footer>
-                    <button name="action_open_vacation" string="Preview" type="object" class="btn-primary" />
-                    <button name="action_print" string="Download template" type="object" class="btn-primary" />
-                    <button string="Cancel" class="oe_link" special="cancel"/>
+                    <button name="action_open_vacation" string="Попередній перегляд" type="object" class="btn-primary" />
+                    <button name="action_print" string="Завантажити заяву" type="object" class="btn-primary" />
+                    <button string="Закрити" class="oe_link" special="cancel"/>
                 </footer>
             </form>
 
         </field>
     </record>
-<!--LIST-->
-<!--    <record id="vacation_empl_list" model="ir.ui.view">
-        <field name="name">vacation.empl.list</field>
-        <field name="model">vacation.empl</field>
-        <field name="arch" type="xml">
-            <tree>
-                <field name="start_date" />
-                <field name="end_date" />
 
-            </tree>
-        </field>
-    </record>-->
-<!--    ACTION-->
-<!--    <record id="action_vacation_empl" model="ir.actions.act_window">-->
-<!--        <field name="name">Vacation Empl</field>-->
-<!--        <field name="res_model">vacation.empl</field>-->
-<!--        <field name="view_mode">tree,form</field>-->
-<!--    </record>-->
 </odoo>

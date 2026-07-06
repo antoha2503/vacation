@@ -10,7 +10,7 @@
             <xpath expr="//header" position="inside">
                 <!-- Добавляем нашу кнопку -->
                 <button name="action_open_vacation_wizard"
-                        string="Подать на отпуск"
+                        string="Заява на відпустку"
                         type="object"
                         class="oe_highlight"/>
             </xpath>
